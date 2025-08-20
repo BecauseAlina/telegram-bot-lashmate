@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: telegram-bot-lashmate
+    env: node
+    region: frankfurt
+    plan: free
+    buildCommand: npm install
+    startCommand: npx tsx server/index.ts
+    envVars:
+      - key: TOKEN
+        value: 8323998271:AAHWsHZ8Uq-CDC_dDxcdWVVxuGmVJKcc3Js
+      - key: ADMIN_CHAT_ID
+        value: 891620446
+      - key: PORT
+        value: 10000
